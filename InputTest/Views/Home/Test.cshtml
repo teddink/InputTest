@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Datetime Test Page";
+}
+
+<style>
+    .fail {
+        color:red;
+    }
+
+    .pass {
+        color:green;
+    }
+</style>
+
+
+<h2>HTML5 Forms - Date and Time Input Tests</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        
+        <form action="javascript:void(0)" id="form">
+
+            <datalist id="dates">
+                <option value="2014-07-01"></option>
+                <option value="2014-07-04"></option>
+                <option value="2013-12-31"></option>
+            </datalist>
+
+            <datalist id="dates_labeled">
+                <option value="2014-07-01">Canada Day 2014</option>
+                <option value="2014-07-04">Independence Day 2014</option>
+                <option value="2013-12-31">New Year's Eve 2014</option>
+            </datalist>
+
+            <datalist id="months">
+                <option value="2014-02"></option>
+                <option value="2014-03"></option>
+                <option value="2013-04"></option>
+            </datalist>
+
+            <datalist id="months_labeled">h
+                <option value="2014-02">Feb. 2014</option>
+                <option value="2014-03">Mar. 2014</option>
+                <option value="2013-04">Apr. 2013</option>
+            </datalist>
+
+            <datalist id="weeks">
+                <option value="2014-W20"></option>
+                <option value="2014-W30"></option>
+                <option value="2013-W40"></option>
+            </datalist>
+
+            <datalist id="weeks_labeled">
+                <option value="2014-W20">20th Week, 2014</option>
+                <option value="2014-W30">30th Week, 2014</option>
+                <option value="2013-W40">40th Week, 2013</option>
+            </datalist>
+
+            <h3>Date</h3>
+
+            <label>invalid min: <input type="date" id="date_invalid_min" min="invalid" value="0001-01-01" /></label><br />
+            <label>incomplete min: <input type="date" id="date_incomplete_min" min="2014-07" value="0001-01-01" /></label><br />
+            <label>valid min: <input type="date" id="date_valid_min" min="2014-07-01" value="2014-06-30" /></label><br />
+            <label>invalid max: <input type="date" id="date_invalid_max" max="invalid" value="9999-09-13" /></label><br />
+            <label>incomplete max: <input type="date" id="date_incomplete_max" max="2014-08" value="9999-09-13" /></label><br />
+            <label>valid max: <input type="date" id="date_valid_max" max="2014-07-08" value="2014-07-09" /></label><br />
+            <label>min greater than max: <input type="date" id="date_min_greater_max" min="2014-09-01" max="2014-07-01" /></label><br />
+            <label>invalid value: <input type="date" id="date_invalid_value" value="invalid" /></label><br />
+            <label>incomplete value: <input type="date" id="date_incomplete_value" value="2014-07" /></label><br />
+            <label>valid value with range: <input type="date" id="date_value_range" min="2014-07-01" max="2014-09-01" value="2014-08-01" /></label><br />
+            <label>valid value: <input type="date" id="date_valid_value" value="2014-07-08" /></label><br />
+            <label>invalid step: <input type="date" id="date_invalid_step" step="invalid" value="2014-07-08" /></label><br />
+            <label>negative step: <input type="date" id="date_negative_step" step="-7" value="2014-07-08" /></label><br />
+            <label>any step: <input type="date" id="date_any_step" step="any" value="2014-07-08" /></label><br />
+            <label>valid numeric step: <input type="date" id="date_valid_step" step="7" value="2014-07-08" /></label><br />
+            <label>floating-point numeric step: <input type="date" id="date_floating_step" step="7.6" value="2014-07-08" /></label><br />
+            <label>value with step mismatch: <input type="date" id="date_step_mismatch" step="7" min="2014-07-08" value="2014-07-10" /></label><br />
+            <label>value with step and step base (min): <input type="date" id="date_step_base" step="7" min="2014-07-08" value="2014-07-15" /></label><br />
+            <label>dynamic values: <input type="date" id="date_dynamic" /></label><br />
+            <label>datalist: <input type="date" id="date_datalist" list="dates" /></label><br />
+            <label>labeled datalist: <input type="date" id="date_datalist_labeled" list="dates_labeled" /></label><br />
+
+            <h3>Month</h3>
+
+            <label>invalid min: <input type="month" id="month_invalid_min" min="invalid" value="0001-01" /></label><br />
+            <label>incomplete min: <input type="month" id="month_incomplete_min" min="2014" value="0001-01" /></label><br />
+            <label>valid min: <input type="month" id="month_valid_min" min="2014-07" value="2014-06" /></label><br />
+            <label>invalid max: <input type="month" id="month_invalid_max" max="invalid" value="9999-09" /></label><br />
+            <label>incomplete max: <input type="month" id="month_incomplete_max" max="2014" value="9999-09" /></label><br />
+            <label>valid max: <input type="month" id="month_valid_max" max="2014-07" value="2014-08" /></label><br />
+            <label>min greater than max: <input type="month" id="month_min_greater_max" min="2014-10" max="2014-07" /></label><br />
+            <label>invalid value: <input type="month" id="month_invalid_value" value="invalid" /></label><br />
+            <label>incomplete value: <input type="month" id="month_incomplete_value" value="2014" /></label><br />
+            <label>valid value with range: <input type="month" id="month_value_range" min="2014-07" max="2014-09" value="2014-08" /></label><br />
+            <label>valid value: <input type="month" id="month_valid_value" value="2014-07" /></label><br />
+            <label>invalid step: <input type="month" id="month_invalid_step" step="invalid" value="2014-07" /></label><br />
+            <label>negative step: <input type="month" id="month_negative_step" step="-2" value="2014-07" /></label><br />
+            <label>any step: <input type="month" id="month_any_step" step="any" value="2014-07" /></label><br />
+            <label>valid numeric step: <input type="month" id="month_valid_step" step="2" value="2014-07" /></label><br />
+            <label>floating-point numeric step: <input type="month" id="month_floating_step" step="1.6" value="2014-07" /></label><br />
+            <label>value with step mismatch: <input type="month" id="month_step_mismatch" step="2" min="2014-07" value="2014-08" /></label><br />
+            <label>value with step and step base (min): <input type="month" id="month_step_base" step="2" min="2014-07" value="2014-09" /></label><br />
+            <label>dynamic values: <input type="month" id="month_dynamic" /></label><br />
+            <label>datalist: <input type="month" id="month_datalist" list="months" /></label><br />
+            <label>labeled datalist: <input type="month" id="month_datalist_labeled" list="months_labeled" /></label><br />
+
+            <h3>Week</h3>
+
+            <label>invalid min: <input type="week" id="week_invalid_min" min="invalid" value="0001-W01" /></label><br />
+            <label>incomplete min: <input type="week" id="week_incomplete_min" min="2014-W" value="0001-W01" /></label><br />
+            <label>valid min: <input type="week" id="week_valid_min" min="2014-W28" value="2014-W27" /></label><br />
+            <label>invalid max: <input type="week" id="week_invalid_max" max="invalid" value="9999-W37" /></label><br />
+            <label>incomplete max: <input type="week" id="week_incomplete_max" max="2014-W" value="9999-W37" /></label><br />
+            <label>valid max: <input type="week" id="week_valid_max" max="2014-W28" value="2014-W29" /></label><br />
+            <label>min greater than max: <input type="week" id="week_min_greater_max" min="2014-W31" max="2014-W28" /></label><br />
+            <label>invalid value: <input type="week" id="week_invalid_value" value="invalid" /></label><br />
+            <label>incomplete value: <input type="week" id="week_incomplete_value" value="2014-W" /></label><br />
+            <label>valid value with range: <input type="week" id="week_value_range" min="2014-W28" max="2014-W30" value="2014-W29" /></label><br />
+            <label>valid value: <input type="week" id="week_valid_value" value="2014-W28" /></label><br />
+            <label>invalid step: <input type="week" id="week_invalid_step" step="invalid" value="2014-W28" /></label><br />
+            <label>negative step: <input type="week" id="week_negative_step" step="-2" value="2014-W28" /></label><br />
+            <label>any step: <input type="week" id="week_any_step" step="any" value="2014-W28" /></label><br />
+            <label>valid numeric step: <input type="week" id="week_valid_step" step="2" value="2014-W28" /></label><br />
+            <label>floating-point numeric step: <input type="week" id="week_floating_step" step="1.6" value="2014-W28" /></label><br />
+            <label>value with step mismatch: <input type="week" id="week_step_mismatch" step="2" min="2014-W28" value="2014-W29" /></label><br />
+            <label>value with step and step base (min): <input type="week" id="week_step_base" step="2" min="2014-W28" value="2014-W30" /></label><br />
+            <label>dynamic values: <input type="week" id="week_dynamic" /></label><br />
+            <label>datalist: <input type="week" id="week_datalist" list="weeks" /></label><br />
+            <label>labeled datalist: <input type="week" id="week_datalist_labeled" list="weeks_labeled" /></label><br />
+
+            <input type="submit" />
+        </form>
+    </div>
+    <div class="col-md-6" id="log">
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Tests.js")

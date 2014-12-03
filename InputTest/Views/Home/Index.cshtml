@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .fail {
+        color: red;
+    }
+</style>
+
+
+@*<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
+
+<div>
+    <h2>All the HTML5 input types</h2>
+    <p><img src="~/Content/html5_badge20.png" /> indicates a new HTML5 input type</p>
+    <hr />
+    <form action="">
+        <div id="dateinput">date <img src="~/Content/html5_badge20.png" />: <input type="date" name="date" placeholder="date"><br></div>
+        <div id="timeinput">time <img src="~/Content/html5_badge20.png" />: <input type="time" name="time" placeholder="time"><br></div>
+        <div id="monthinput">month <img src="~/Content/html5_badge20.png" />: <input type="month" name="month" placeholder="month"><br></div>
+        <div id="weekinput">week <img src="~/Content/html5_badge20.png" />: <input type="week" name="week" placeholder="week"><br></div>
+        <div id="datetimeinput">datetime <img src="~/Content/html5_badge20.png" />: <input type="datetime" name="datetime" placeholder="datetime"><br></div>
+        <div id="datetimelocalinput">datetime-local <img src="~/Content/html5_badge20.png" />: <input type="datetime-local" name="datetime-local" placeholder="datetime-local"><br></div>
+        <hr />
+        hidden: <input type="hidden" name="hidden" placeholder="hidden"><br>
+        <div id="emailinput">email <img src="~/Content/html5_badge20.png" />: <input type="email" name="email" placeholder="email@email.com"><br></div>
+        <div id="numberinput">number <img src="~/Content/html5_badge20.png" />: <input type="number" name="number" placeholder="42"><br></div>
+        <div id="telinput">tel <img src="~/Content/html5_badge20.png" />: <input type="tel" name="tel" placeholder="tel"><br></div>
+        text: <input type="text" name="text" placeholder="text"><br>
+        <div id="urlinput">url <img src="~/Content/html5_badge20.png" />: <input type="url" name="url" placeholder="http://url.com"><br></div>
+        password: <input type="password" name="password" placeholder="password"><br>
+        <div id="searchinput">search <img src="~/Content/html5_badge20.png" />: <input type="search" name="search" placeholder="search"><br></div>
+        <hr />
+        <div id="colorinput">color <img src="~/Content/html5_badge20.png" />: <input type="color" name="color" placeholder="color"><br></div>
+        file: <input type="file" name="file" value="file"><br>
+        image: <input type="image" name="image" value="image"><br>
+        radio1: <input type="radio" name="radio" value="radio1" checked> radio1<br>
+        radio2: <input type="radio" name="radio" value="radio2"> radio2<br>
+        checkbox: <input type="checkbox" name="checkbox" value="checkbox"><br>
+        <div id="rangeinput">range <img src="~/Content/html5_badge20.png" />: <input type="range" name="range" value="range"><br></div>
+        <hr />
+        button: <input type="button" name="button" value="button"><br>
+        reset: <input type="reset" name="reset" value="reset"><br>
+        submit: <input type="submit" name="submit" value="submit"><br>
+</form>
+</div>
+
+@Scripts.Render("~/Scripts/detection.js")
